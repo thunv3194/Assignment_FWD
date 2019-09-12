@@ -1,0 +1,142 @@
+.main__header {
+  background: url(../../assets/images/background/header-bg.png) no-repeat center
+    center;
+}
+.header__top {
+  grid-column: span 16;
+  height: 140px;
+}
+.nav {
+  &__brand {
+    flex-basis: 25.532%;
+    a {
+      display: inline-block;
+      height: 140px;
+      line-height: 140px;
+    }
+  }
+  &__bar {
+    flex-basis: 74.469%;
+    ul {
+      height: 100%;
+      justify-content: space-around;
+      li {
+        width: 200px;
+        position: relative;
+        transition: all ease 0.4s;
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          color: $white;
+          font-family: "SD Gothic Neo";
+        }
+      }
+      li:after {
+        position: absolute;
+        content: "";
+        display: block;
+        bottom: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all ease 0.4s;
+        width: 0;
+        height: 0;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 14px solid $yellow;
+        opacity: 0;
+        visibility: hidden;
+      }
+      li.active {
+        background-color: $yellow;
+        transition: all ease 0.4s;
+      }
+      li.active:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.header__bot {
+  height: 55px;
+  background-color: $blue;
+}
+.sub__menu {
+  height: 55px !important;
+  line-height: 55px !important;
+  display: none;
+  justify-content: space-around;
+  a {
+    overflow: hidden;
+    font-family: "Nanum Gothic", sans-serif !important;
+  }
+
+  a:hover {
+    color: $yellow;
+    transition: all ease 0.4s;
+  }
+  &.active {
+    display: flex;
+    a.default__link {
+      color: $yellow;
+    }
+  }
+}
+
+// hamburger-menu
+.hamburger-menu {
+  display: none;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu:hover {
+  cursor: pointer;
+}
+
+.hamburger-menu .menu-item {
+  background: #fff;
+  display: block;
+  height: 3px;
+  margin: 0 0 10px;
+  transition: all 0.3s ease-in-out;
+  width: 40px;
+}
+
+.hamburger-menu.open .menu-item {
+  margin: 0 0 5px;
+}
+
+.hamburger-menu.open .menu-item:first-child {
+  transform: rotate(45deg);
+  transform-origin: 10px;
+}
+
+.hamburger-menu.open .menu-item:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .menu-item:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 8px;
+}
+
+.nav__item__wrapper:hover {
+  background-color: $yellow;
+  &:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .sub__menu {
+    display: flex;
+  }
+}

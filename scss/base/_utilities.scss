@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "SD Gothic Neo";
+  src: url("../../assets/fonts/Apple\ SD\ Gothic\ Neo\ Bold.ttf")
+    format("truetype");
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+.container__fluid {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.container__md {
+  padding: 0 10px;
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-column-gap: 20px;
+}
+.row {
+  grid-column: span 16;
+  display: flex;
+  justify-content: space-between;
+}
+.grid-row-gap-60 {
+  grid-row-gap: 60px;
+}
+.mb-35 {
+  margin-bottom: 35px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.w-500 {
+  max-width: 500px;
+}
+.image__wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+.text {
+  &-white {
+    color: $white;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-grey {
+    color: $grey;
+  }
+  &-blue {
+    color: $blue;
+  }
+  &-3b {
+    color: #3b3b3b;
+  }
+}
+.font-size {
+  &-14 {
+    font-size: 14px;
+  }
+  &-24 {
+    font-size: 24px;
+  }
+  &-40 {
+    font-size: 40px;
+  }
+  &-45 {
+    font-size: 45px;
+  }
+  &-80 {
+    font-size: 80px;
+  }
+}
+.font-family {
+  &-SD {
+    font-family: "SD Gothic Neo";
+  }
+  &-Nanum {
+    font-family: "Nanum Gothic", sans-serif;
+  }
+  &-Noto {
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  &-Roboto {
+    font-family: "Roboto", sans-serif;
+  }
+}
+.font-weight {
+  &-100 {
+    font-weight: 100;
+  }
+  &-700 {
+    font-weight: 700;
+  }
+}
+.blue-gradient {
+  background: linear-gradient(to right, $blue 0%, #3a5af8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.yellow-gradient {
+  background: linear-gradient(to right, $blue 0%, $yellow 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.border-right-0 {
+  border-right: 0 !important;
+}
+.first__td {
+  border-top: 1px solid #dedede;
+}
+.line-height-15 {
+  line-height: 1.5;
+}
